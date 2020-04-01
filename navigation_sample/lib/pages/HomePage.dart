@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_sample/pages/BluePage.dart';
 import 'package:navigation_sample/pages/GreenPage.dart';
 import 'package:navigation_sample/pages/PinkPage.dart';
 
@@ -82,6 +83,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text("Static Navigation"),
                   onPressed: () {
                     Navigator.pushNamed(context, PinkPage.route);
+                  },
+                ),
+                FlatButton( 
+                  //Can custom new route with arguments
+                  child: Text("Dynamic Navigation"),
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context, 
+                      BluePage.route,
+                      arguments: {"content": "Clicked from HomePage"});
                   },
                 )
           ],
