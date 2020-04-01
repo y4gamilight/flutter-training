@@ -15,7 +15,7 @@ class BluePage extends StatelessWidget {
           child: Text(arguments["content"]),
           decoration: BoxDecoration(
              color: Colors.blue,
-            ),
+         ),
     ),
       ),
     );
