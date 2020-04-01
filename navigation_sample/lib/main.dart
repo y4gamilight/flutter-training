@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_sample/pages/HomePage.dart';
+import 'package:navigation_sample/pages/PinkPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +22,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: MyHomePage.route,
+      routes: {
+        MyHomePage.route: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+        PinkPage.route: (context) => PinkPage()
+      },
+      // home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_sample/pages/GreenPage.dart';
+import 'package:navigation_sample/pages/PinkPage.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -15,6 +16,7 @@ class MyHomePage extends StatefulWidget {
   // always marked "final".
 
   final String title;
+  static String route = "routeHomePage";
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -69,11 +71,19 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 FlatButton(
+                    //Can keep old route on memory stack
                   child: Text("Direct Navigation"),
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=> GreenPage()));
                   },
-            )
+                ),
+                FlatButton( 
+                  //Apply if you wanna use BloC and Provider Patter
+                  child: Text("Static Navigation"),
+                  onPressed: () {
+                    Navigator.pushNamed(context, PinkPage.route);
+                  },
+                )
           ],
         ),
       ),
