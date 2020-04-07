@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layout_sample/pages/AlignLayoutPage.dart';
 import 'package:layout_sample/pages/CenterLayoutPage.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -17,7 +18,7 @@ class MyHomePage extends StatelessWidget {
             FlatButton(child: Text("Alignes sample"),
             onPressed: () {
                Navigator.push(context, MaterialPageRoute(builder: (context) => AlignLayoutPage()));
-            },)
+            },) 
           ],
         ),
       )
