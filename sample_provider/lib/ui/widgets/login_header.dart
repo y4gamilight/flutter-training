@@ -2,12 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:sample_provider/ui/shared/text_styles.dart';
 import 'package:sample_provider/ui/shared/ui_helper.dart';
+import 'package:sample_provider/ui/widgets/login_text_field.dart';
 
 class LoginHeader extends StatelessWidget {
   final TextEditingController controller;
   final String validationMessage;
 
-  LoginHeader( {@required this.controller, this.validationMessage})
+  LoginHeader( {@required this.controller, this.validationMessage});
 
   @override 
   Widget build( BuildContext context) {
